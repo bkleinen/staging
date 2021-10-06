@@ -1,5 +1,5 @@
 <!doctype html><html><head>
-<title>Info 2 Worksheet 02 - Threads - Prof. Dr. Barne Kleinen</title>
+<title>Info 2 WS 2021/22 - Material - Prof. Dr. Barne Kleinen</title>
 <link rel=icon href=https://bkleinen.github.io/staging//favicon.ico>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -20,7 +20,7 @@
 </div>
 <div class="col-md-10 c1 p-2"><div class="d-flex flex-row c6">
 <div class="c7 mt-auto">
-<h1 class="c5 title"> Info 2 WS 2021/22 - Worksheets </h1>
+<h1 class="c5 title"> Info 2 WS 2021/22 - Material </h1>
 <small>Website of <a href=https://bkleinen.github.io/staging//>Prof. Dr. Barne Kleinen</a>, Professor for Media Informatics
 (<a href=https://imi-bachelor.htw-berlin.de>Bachelor</a>/<a href=https://imi-master.htw-berlin.de>Master</a>) at <a href=https://www.htw-berlin.de>HTW Berlin</a> </small>
 </div>
@@ -87,8 +87,7 @@ Misc
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/>classes</a></li>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/>ws2021</a></li>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/>info2</a></li>
-<li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/worksheets/>worksheets</a></li>
-<li class="breadcrumb-item active" aria-current=page>threads</li>
+<li class="breadcrumb-item active" aria-current=page>material</li>
 </ol>
 </nav>
 </div>
@@ -104,7 +103,7 @@ Misc
 <a class=nav-link href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/>Labs</a>
 </li>
 <li class=nav-item>
-<a class=nav-link href=https://bkleinen.github.io/staging/classes/ws2021/info2/material/>Material</a>
+<a class="nav-link active" href=https://bkleinen.github.io/staging/classes/ws2021/info2/material/>Material</a>
 </li>
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" data-toggle=dropdown href=# role=button aria-haspopup=true aria-expanded=false>External Links</a>
@@ -118,87 +117,13 @@ Misc
 </li>
 </ul>
 </div>
-<h2 class=followed> Info 2 Worksheet 02 - Threads</h2>
-<header class=following>
-<a data-toggle=collapse href=#tocContent role=button aria-expanded=false aria-controls=tocContent>
-Table of Contents
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<a href=/staging/classes/ws2021/info2/worksheets/files/>&lt;prev</a>
-</header>
-<div class=collapse id=tocContent>
-<nav id=TableOfContents></nav>
-</div>
-<h1 id=a-visualize-concurrency>A. Visualize Concurrency</h1>
-<p>Write a little program that starts some threads (2-6 maybe) that create
-an output visualizing the switch between the threads.
-e.g.</p>
-<pre><code>Thread A running
-Thread A running
-Thread A running
-Thread B running
-Thread B running
-Thread C running
-Thread C running
-Thread C running
-Thread A running
-</code></pre>
-<h1 id=b-create-a-deadlock>B. Create a Deadlock</h1>
-<p>Write a little Program that creates a deadlock.</p>
-<h1 id=c-is-java-hashmap-thread-safe>C. Is Java HashMap Thread Safe?</h1>
-<h1 id=d-atomic-and-non-atomic-operations>D. Atomic and non-Atomic Operations</h1>
-<p>What will be the sum? Why might this not be safe?</p>
-<pre><code>public class NotSafe {
-	long sum = 0;
-
-	class Incrementor implements Runnable {
-        int n = 0;
-
-        Incrementor(int n) {
-            this.n = n;
-        }
-
-        @Override
-        public void run() {
-            for (int i = 0; i &lt; n; i++)
-                sum++;
-        }
-	}
-
-	class Decrementor implements Runnable {
-        int n = 0;
-
-        Decrementor(int n) {
-            this.n = n;
-        }
-
-        @Override
-        public void run() {
-            for (int i = 0; i &lt; n; i++)
-                sum--;
-        }
-	}
-
-	public static void main(String[] args) {
-        new NotSafe().start();
-	}
-
-	public void start() {
-        long startTime = System.currentTimeMillis();
-        for (int i = 0; i &lt; 100; i++) {
-            sum = 0;
-            Thread inc = new Thread(new Incrementor(5000));
-            Thread dec = new Thread(new Decrementor(4000));
-            inc.start();
-            dec.start();			
-            System.out.println(&quot;sum: &quot; + sum);
-        }
-        long endTime = System.currentTimeMillis();
-        System.out.println(&quot;&quot; + (endTime - startTime) + &quot;ms&quot;);
-	}
-
-}
-</code></pre>
+<h2 id=available-material>Available Material</h2>
+<ul>
+<li><a href=/staging/classes/ws2021/info2/material/00_repetition_info1_finger_exercises/>Repetition - Finger Exercises</a></li>
+<li><a href=/staging/classes/ws2021/info2/material/02_terms/>Repetition - Terms</a></li>
+<li><a href=/staging/classes/ws2021/info2/material/topic02_1_finger_exercises/>Info 2 Finger Exercises</a></li>
+<li><a href=/staging/classes/ws2021/info2/material/topic01_crc_cards/>Info 2 Material Topic 01 - CRC Cards</a></li>
+</ul>
 </div>
 </div>
 </main>
@@ -218,7 +143,7 @@ Thread A running
 <a href=https://bkleinen.github.io/staging//contact/impressum>Impressum</a>,
 <a href=https://bkleinen.github.io/staging//contact/datenschutzerklaerung>Datenschutzerklärung</a>
 <br>
-<small>This page was authored by: B. Kleinen
+<small>This page was authored by: kleinen
 <br>
 <a rel=license href=https://creativecommons.org/licenses/by-nc/3.0/de/deed.en_US><img alt="Creative Commons License" style=border-width:0 src=https://i.creativecommons.org/l/by-nc/3.0/de/80x15.png></a>
 This <span xmlns:dct=https://purl.org/dc/terms/ href=https://purl.org/dc/dcmitype/Text rel=dct:type>work</span> is licensed under a <a rel=license href=https://creativecommons.org/licenses/by-nc/3.0/de/deed.en_US>Creative Commons Attribution-NonCommercial 3.0 Germany License</a>.
@@ -227,24 +152,48 @@ This <span xmlns:dct=https://purl.org/dc/terms/ href=https://purl.org/dc/dcmityp
 </div>
 </small>
 <div><hr><small> <h7>Debug Info</h7><ul>
-<li>Template: theme: layouts/classes/single.html </li>
+<li>Template: theme: layouts/classes/list.html </li>
 <li>
 hugo.Environment: staging
 </li><li>
-Path: classes/ws2021/info2/worksheets/threads.md
+Path: classes/ws2021/info2/material/_index.md
 </li><li>
-Kind: page
+Kind: section
 </li><li>
 Type: classes
 </li><li>
 Scratch type: class_subpage
 </li><li>
-Layout:
+Layout: page
 </li><li>
 LinkOrNot: </li><li>
 class_page_path: /classes/ws2021/info2
 </li><li>
-.Scratch: {map[class_page_path:/classes/ws2021/info2 pageTitle:Info 2 WS 2021/22 - Worksheets trace:layouts/classes/single.html type:class_subpage] {{0 0} 0 0 0 0}}
+.Scratch: {map[class_page_path:/classes/ws2021/info2 trace:layouts/classes/list.html type:class_subpage] {{0 0} 0 0 0 0}}
+</li>
+<li>Subpages in order:
+<ul>
+<li>
+<a href=/staging/classes/ws2021/info2/material/00_repetition_info1_finger_exercises/>
+Repetition - Finger Exercises
+</a>
+</li>
+<li>
+<a href=/staging/classes/ws2021/info2/material/02_terms/>
+Repetition - Terms
+</a>
+</li>
+<li>
+<a href=/staging/classes/ws2021/info2/material/topic02_1_finger_exercises/>
+Info 2 Finger Exercises
+</a>
+</li>
+<li>
+<a href=/staging/classes/ws2021/info2/material/topic01_crc_cards/>
+Info 2 Material Topic 01 - CRC Cards
+</a>
+</li>
+</ul>
 </li>
 </ul></small><hr></div>
 </div>
