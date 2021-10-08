@@ -1,6 +1,5 @@
 <!doctype html><html><head>
-<meta name=generator content="Hugo 0.88.1">
-<title>Prof. Dr. Barne Kleinen - Prof. Dr. Barne Kleinen</title>
+<title>Email Collector for LSF - Prof. Dr. Barne Kleinen</title>
 <link rel=icon href=https://bkleinen.github.io/staging//favicon.ico>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -21,7 +20,7 @@
 </div>
 <div class="col-md-10 c1 p-2"><div class="d-flex flex-row c6">
 <div class="c7 mt-auto">
-<h1 class="c5 title"> Prof. Dr. Barne Kleinen </h1>
+<h1 class="c5 title"> Email Collector for LSF </h1>
 <small>Website of <a href=https://bkleinen.github.io/staging//>Prof. Dr. Barne Kleinen</a>, Professor for Media Informatics
 (<a href=https://imi-bachelor.htw-berlin.de>Bachelor</a>/<a href=https://imi-master.htw-berlin.de>Master</a>) at <a href=https://www.htw-berlin.de>HTW Berlin</a> </small>
 </div>
@@ -35,7 +34,7 @@
 <div class=nav>
 <ul class="nav flex-md-column">
 <li class=nav-item>
-<a class="nav-link active" href=/staging/>Home</a>
+<a class=nav-link href=/staging/>Home</a>
 </li>
 <li class=nav-item>
 <a class="nav-link dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
@@ -67,7 +66,7 @@ Studies
 <a class=nav-link href=/staging/software_projects/>Software Projects</a>
 </li>
 <li class=nav-item>
-<a class="nav-link dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<a class="nav-link dropdown-toggle active" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
 Misc
 </a>
 <div class=dropdown-menu aria-labelledby=dropdownMenuLink>
@@ -84,50 +83,56 @@ Misc
 <div class=outer>
 <nav aria-label=breadcrumb role=navigation>
 <ol class="breadcrumb breadcrumb-thin">
-<li class="breadcrumb-item active" aria-current=page>Home</li>
+<li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/>Home</a></li>
+<li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/misc/>misc</a></li>
+<li class="breadcrumb-item active" aria-current=page>lsf</li>
 </ol>
 </nav>
 </div>
-<div class=coursenav>
-<ul class="nav nav-tabs">
-<li class=nav-item>
-<a class=nav-link href="https://moodle.htw-berlin.de/course/view.php?id=21638">IMI-FAQ</a>
-</li><li class=nav-item>
-<a class=nav-link href=https://imi-map.f4.htw-berlin.de/>IMI-Map</a>
-</li><li class=nav-item>
-<a class=nav-link href=https://wiki.htw-berlin.de/confluence/display/fb4imi/FB4+Internationale+Medieninformatik>IMI-Wiki</a>
-</li><li class=nav-item>
-<a class=nav-link href=https://imi-blog.de/>IMI-Blog</a>
-</li>
-</ul>
-</div>
-<div class=box>
-<h4>Classes Winter Term 2021</h4>
-<div>
-<div class="col-12 col-md-6 mb-2">
-<ul>
-<li><a href=/staging/classes/ws2021/info2/>B7 Informatics 2 WS 2021/22</a></li>
-<li><a href=/staging/classes/ws2021/networks/>B9 Networks WS 2021/22</a></li>
-<li><a href=/staging/classes/ws2021/m1-web/>M1 Media Programming</a></li>
-<li><a href=/staging/classes/ws2021/m-wt1-webapplications/>WT1 Web Applications WS 2021/22</a></li>
-</ul>
+<div class=coursenav></div>
+<script>function convert(){const e=document.getElementById("lsfstuff").value,b=e.match(/[^\r\n]+/g),c=/.*\d{6}\s*([^\t]*?)\s*\t\s*([^\t]*?)\s*s0(\d{6})@htw-berlin.de.*/,f="$2 $1 <s0$3@htw-berlin.de>",a={student:[],ignore:[]},g=(a,b)=>(a[b.match(c)?'student':'ignore'].push(b),a);b.reduce(g,a);const h=a.student.map(a=>a.replace(c,f)),i=new Set(h),d=Array.from(i).sort();document.getElementById("emailarea").innerHTML=d.join("\n"),document.getElementById("number_emails").innerHTML=b.length+" lines read, "+d.length+" unique addresses",document.getElementById("ignored").innerHTML=a.ignore.join("\n"),document.getElementById("ignoredNumber").innerHTML=a.ignore.length+" ignored lines"}</script>
+<h2>Email Collector for LSF</h2>
+<div class=container-fluid>
+<div class=row>
+<div class=col>
+<div class=float-right>
+<button onclick=convert()>Show Email Adresses</button>
 </div>
 </div>
-<a href=https://bkleinen.github.io/staging//classes/>All Classes (Archive)</a>
-<br><br>
+<div class=col>
+<div id=ignoredNumber>ignored lines</div>
+<textarea id=ignored cols=60 rows=2></textarea>
 </div>
-<div class=box>
-<h4>Thesis</h4>
-<p>There is also some info here if you consider writing your <a href=studies/thesis/>Thesis</a> or <a href=studies/ic/>Independent Coursework</a> with me.</p>
 </div>
-<div class=box>
-<h4>Office Hours</h4><p>Office Hours are back on Campus but also still possible via Zoom, simply in the order
-<a href=https://wiki.htw-berlin.de/confluence/display/fb4crskleinen/Office+Hours+Prof.+Kleinen>you've registered in the wiki.</a></p>
-<br>
+<div class=row>
+<div class=col-6>
+<div>Paste list from LSF here</div>
+<textarea id=lsfstuff cols=60 rows=100 onchange=convert()></textarea>
 </div>
-<div class=below>
-&nbsp;
+<div class=col-6>
+<div id=number_emails>here be dragons</div>
+<textarea id=emailarea cols=60 rows=100></textarea>
 </div>
+</div>
+</div>
+Links Liste aus "Spezielle Information (Namenliste mit Anmeldungen und Ablehnungen)"pasten.
+<a href=#anleitung>mehr info unten.</a>
+<table>
+<tr>
+<tr valign=top>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</table>
+<hr>
+<h2 id=anleitung>Anleitung</h2>
+<p>In die Box links den Inhalt der Tabelle "Spezielle Information (Namenliste mit Anmeldungen und Ablehnungen)"
+pasten.<br> Weg dorthin: Unten auf "Anmeldezahlen" und dann "Spezielle Information" klicken.</p>
+<p><img src="{{ site.BaseURL }}/misc/images/anmeldezahlen.png" alt=anmeldezahlen.png>
+<img src="{{ site.BaseURL }}/misc/images/SpezielleInformation.png" alt=SpezielleInformation.png>
+</p>
 </div>
 </div>
 </main>
@@ -147,9 +152,7 @@ Misc
 <a href=https://bkleinen.github.io/staging//contact/impressum>Impressum</a>,
 <a href=https://bkleinen.github.io/staging//contact/datenschutzerklaerung>Datenschutzerklärung</a>
 <br>
-<small>This page was authored by: B. Kleinen
-Version: d3a7ccc5
-deployed by workflow: Deploy Staging
+<small>This page was authored by: kleinen
 <br>
 <a rel=license href=https://creativecommons.org/licenses/by-nc/3.0/de/deed.en_US><img alt="Creative Commons License" style=border-width:0 src=https://i.creativecommons.org/l/by-nc/3.0/de/80x15.png></a>
 This <span xmlns:dct=https://purl.org/dc/terms/ href=https://purl.org/dc/dcmitype/Text rel=dct:type>work</span> is licensed under a <a rel=license href=https://creativecommons.org/licenses/by-nc/3.0/de/deed.en_US>Creative Commons Attribution-NonCommercial 3.0 Germany License</a>.
@@ -158,15 +161,15 @@ This <span xmlns:dct=https://purl.org/dc/terms/ href=https://purl.org/dc/dcmityp
 </div>
 </small>
 <div><hr><small> <h7>Debug Info</h7><ul>
-<li>Template: theme: layouts/_index.html</li>
+<li>Template: theme: layouts/_default/single.html</li>
 <li>
 hugo.Environment: staging
 </li><li>
-Path: _index.html
+Path: misc/lsf.html
 </li><li>
-Kind: home
+Kind: page
 </li><li>
-Type: page
+Type: misc
 </li><li>
 Scratch type:
 </li><li>
@@ -176,60 +179,6 @@ LinkOrNot: </li><li>
 class_page_path:
 </li><li>
 .Scratch: {map[] {{0 0} 0 0 0 0}}
-</li>
-<li>Subpages in order:
-<ul>
-<li>
-<a href=/staging/classes/>
-Classes
-</a>
-</li>
-<li>
-<a href=/staging/contact/>
-Barne Kleinen | Contact Info
-</a>
-</li>
-<li>
-<a href=/staging/book/>
-Books
-</a>
-</li>
-<li>
-<a href=/staging/imi/>
-HTW Berlin Internationale Medieninformatik
-</a>
-</li>
-<li>
-<a href=/staging/labore/>
-Labore
-</a>
-</li>
-<li>
-<a href=/staging/misc/>
-Miscellany
-</a>
-</li>
-<li>
-<a href=/staging/news/>
-News and Announcements
-</a>
-</li>
-<li>
-<a href=/staging/posts/>
-News and Announcements
-</a>
-</li>
-<li>
-<a href=/staging/software_projects/>
-Software Projects
-</a>
-</li>
-<li>
-<a href=/staging/studies/>
-Studies
-</a>
-</li>
-</ul>
 </li>
 </ul></small><hr></div>
 </div>
