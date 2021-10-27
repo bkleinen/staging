@@ -1,6 +1,6 @@
 <!doctype html><html>
 <head>
-<title>B9 Networks WS 2021/22 - Labs - STAGING --- Prof. Dr. Barne Kleinen</title>
+<title>Lab 01 - Nginx & HTTP - STAGING --- Prof. Dr. Barne Kleinen</title>
 <link rel=icon href=https://bkleinen.github.io/staging//favicon.ico>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -95,7 +95,8 @@ at <a href=https://www.htw-berlin.de>HTW Berlin</a>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/>classes</a></li>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/>ws2021</a></li>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/networks/>networks</a></li>
-<li class="breadcrumb-item active" aria-current=page>labs</li>
+<li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/networks/labs/>labs</a></li>
+<li class="breadcrumb-item active" aria-current=page>lab01_ch01</li>
 </ol>
 </nav>
 </div>
@@ -129,13 +130,74 @@ at <a href=https://www.htw-berlin.de>HTW Berlin</a>
 </ul>
 </div>
 <div class=container-fluid>
-<h2 id=labs>Labs</h2>
-<p>
+<h2 class=followed> Lab 01 - Nginx & HTTP</h2>
+<header class=following>
+<a data-bs-toggle=collapse href=#tocContent role=button aria-expanded=false aria-controls=tocContent>
+Table of Contents
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href=/classes/ws2021/networks/labs/lab00_intro/>&lt;prev</a>
+</header>
+<div class=collapse id=tocContent>
+<nav id=TableOfContents>
 <ul>
-<li><a href=/classes/ws2021/networks/labs/lab00_intro/>Lab 00 - Intro</a></li>
-<li><a href=/classes/ws2021/networks/labs/lab01_ch01/>Lab 01 - Nginx & HTTP</a></li>
+<li><a href=#part-1-set-up-a-real-web-server-on-a-virtual-machine>Part 1: Set up a Real Web Server on a Virtual Machine</a>
+<ul>
+<li><a href=#linux--shell-resources>Linux / Shell Resources</a></li>
 </ul>
-The lab assignments will be published here 1 week before the topic starts.</p>
+</li>
+<li><a href=#part-2-set-up-homepages>Part 2: Set up Homepages</a></li>
+<li><a href=#part-3-wireshark-lab-getting-started>Part 3: Wireshark Lab: Getting Started</a></li>
+<li><a href=#part-4-hack-http>Part 4: Hack http</a>
+<ul>
+<li><a href=#lab-report>Lab Report</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<h2 id=part-1-set-up-a-real-web-server-on-a-virtual-machine>Part 1: Set up a Real Web Server on a Virtual Machine</h2>
+<p>We will do this part together in lab, where I will provide each group with
+a virtual server hosted at the HTW - you will install and configure nginx
+on port 80 on these machines.</p>
+<h3 id=linux--shell-resources>Linux / Shell Resources</h3>
+<ul>
+<li>Here&rsquo;s the link to the very brief intro I wrote:
+<a href=https://bkleinen.github.io/staging/material/ops/debian-server/>Setting up a Debian Webserver</a></li>
+<li>This is my recommendation for an introductionary book:
+<a href=https://linuxcommand.org/lc3_learning_the_shell.php#contents>LinuxCommand.org: Learning the shell.</a></li>
+<li>If you prefer videos, this
+<a href="https://www.youtube.com/watch?v=1hvVcEhcbLM">Linux Essentials for Ethical Hackers - Full InfoSec Course - YouTube</a>
+and this <a href="https://www.youtube.com/watch?v=lZAoFs75_cs">Linux for Ethical Hackers (Kali Linux Tutorial) - YouTube</a>
+seem reasonable.</li>
+<li>Note that you are on Debian 11, commands may differ - check the <a href=https://www.debian.org/doc/manuals/debian-reference/>Debian Reference</a>.</li>
+</ul>
+<h2 id=part-2-set-up-homepages>Part 2: Set up Homepages</h2>
+<p>For each one in your group, set up a homepage that is accessible via
+<code>http://&lt;servername>/~&lt;username></code> for each of your team members. The
+server roots should be under <code>~/.public_html</code> or ``~/public_html`</p>
+<h2 id=part-3-wireshark-lab-getting-started>Part 3: Wireshark Lab: Getting Started</h2>
+<p>We will be doing the <a href=http://gaia.cs.umass.edu/kurose_ross/wireshark.php>Wiresharks Labs</a> from the book.
+Get the &ldquo;<a href=http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Intro_v8.1.docx>Getting Started v8.1</a>&rdquo;
+Lab from Kurose&rsquo;s Website and work through it.</p>
+<p>Include the answers to the questions in your report; instead of printing the
+two packets, copy the text from a preview / pdf and include them in your report.
+You will need the first one for Part 4!</p>
+<h2 id=part-4-hack-http>Part 4: Hack http</h2>
+<p>Extract the first two lines of the HTTP GET requests issued in Part 2 (e.g. from
+the printouts), open a telnet session on the host on port 80 and send the get
+request manually. You&rsquo;ll need the first two lines (the get and the host) and
+issue two more empty lines.</p>
+<p>Try the same with your own nginx server. Include the results in your report.</p>
+<h3 id=lab-report>Lab Report</h3>
+<p>Prepare a Lab Report together as PDF structured like this Lab Assignment.
+You may work on the reports in flexible teams of 2-3 students.</p>
+<p>Always put the names of all contributing people on your report.</p>
+<p>** put your server name in your report! **</p>
+<p>Each one of you has to hand in the completed Report individually in moodle
+by Friday 17:00 after the second lab meeting!</p>
+<p>In your report, describe what you did and what you found,
+as well as errors or problems you&rsquo;ve encountered.</p>
 </div>
 </div>
 </div>
@@ -178,15 +240,15 @@ This page was authored by: kleinen
 </div>
 </small>
 <div><hr><small> <h7>Debug Info</h7><ul>
-<li>Template: theme: layouts/classes/list.html </li>
+<li>Template: theme: layouts/classes/single.html </li>
 <li>
 hugo.Environment: staging
 </li><li>
-Path: classes/ws2021/networks/labs/_index.md
+Path: classes/ws2021/networks/labs/lab01_ch01.md
 </li><li>
 Section: classes
 </li><li>
-Kind: section
+Kind: page
 </li><li>
 Type: classes
 </li><li>
@@ -197,21 +259,7 @@ Layout:
 LinkOrNot: </li><li>
 class_page_path: /classes/ws2021/networks
 </li><li>
-.Scratch: {map[class_page_path:/classes/ws2021/networks trace:layouts/classes/list.html type:class_subpage] {{0 0} 0 0 0 0}}
-</li>
-<li>Subpages in order:
-<ul>
-<li>
-<a href=/classes/ws2021/networks/labs/lab00_intro/>
-Lab 00 - Intro
-</a>
-</li>
-<li>
-<a href=/classes/ws2021/networks/labs/lab01_ch01/>
-Lab 01 - Nginx & HTTP
-</a>
-</li>
-</ul>
+.Scratch: {map[class_page_path:/classes/ws2021/networks pageTitle:B9 Networks WS 2021/22 - Labs trace:layouts/classes/single.html type:class_subpage] {{0 0} 0 0 0 0}}
 </li>
 </ul></small><hr></div>
 </div>
