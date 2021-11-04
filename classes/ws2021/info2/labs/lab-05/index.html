@@ -1,6 +1,6 @@
 <!doctype html><html>
 <head>
-<title>Info 2 WS 2021/22 - Labs and Exercises - STAGING --- Prof. Dr. Barne Kleinen</title>
+<title>Info2: Exercise 05: Execution times - STAGING --- Prof. Dr. Barne Kleinen</title>
 <link rel=icon href=https://bkleinen.github.io/staging//favicon.ico>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -95,7 +95,8 @@ at <a href=https://www.htw-berlin.de>HTW Berlin</a>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/>classes</a></li>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/>ws2021</a></li>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/>info2</a></li>
-<li class="breadcrumb-item active" aria-current=page>labs</li>
+<li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/>labs</a></li>
+<li class="breadcrumb-item active" aria-current=page>lab-05</li>
 </ol>
 </nav>
 </div>
@@ -126,119 +127,142 @@ at <a href=https://www.htw-berlin.de>HTW Berlin</a>
 </ul>
 </div>
 <div class=container-fluid>
-<header>
+<h2 class=followed> Info2: Exercise 05: Execution times</h2>
+<header class=following>
 <a data-bs-toggle=collapse href=#tocContent role=button aria-expanded=false aria-controls=tocContent>
 Table of Contents
 </a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/lab-04/>&lt;prev</a>
 </header>
 <div class=collapse id=tocContent>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#before-the-lab-pre-labs>Before the lab: Pre-Labs</a></li>
-<li><a href=#during-the-lab>During the lab:</a>
+<li><a href=#learning-goals>Learning Goals</a></li>
+<li><a href=#pre-lab>Pre-Lab</a></li>
+<li><a href=#assignment>Assignment</a>
 <ul>
-<li><a href=#communication>Communication</a></li>
-<li><a href=#lab-assignments>Lab Assignments</a></li>
+<li><a href=#part-1-analysis-of-algorithms>Part 1: Analysis of Algorithms</a></li>
+<li><a href=#part-2-prime-numbers>Part 2: Prime Numbers</a></li>
+<li><a href=#for-the-bored>For the bored:</a></li>
 </ul>
 </li>
-<li><a href=#teams>Teams</a></li>
-<li><a href=#reports>Reports</a>
-<ul>
-<li><a href=#deadline>Deadline</a></li>
-<li><a href=#grading>Grading</a></li>
-<li><a href=#content-of-the-report>Content of the report</a></li>
-<li><a href=#how-to-submit-correctly>How to submit correctly</a></li>
-<li><a href=#git>Git</a></li>
-<li><a href=#late-reports>Late reports</a></li>
-</ul>
-</li>
+<li><a href=#lab-report--what-to-turn-in>Lab Report / What to turn in</a></li>
 </ul>
 </nav>
 </div>
-<p>Welcome! On this page you find important information about the labs: How to prepare, how to communicate, what to work on, how to submit. Read through it carefully and ask if anything is unclear.</p>
-<h2 id=before-the-lab-pre-labs>Before the lab: Pre-Labs</h2>
-<p>It is IMPORTANT that you are familiar with the exercise before the lab starts. Before the lab starts do the following:</p>
+<h2 id=learning-goals>Learning Goals</h2>
+<p>After this lab you should be able to agree with each of the following statements.</p>
+<p>I can evaluate the efficiency of algorithms:</p>
 <ul>
-<li>read through the whole exercise (see below)</li>
-<li>do the pre-lab</li>
-<li>recap on what you did in the lecture</li>
-<li>note down any questions</li>
-<li>(register for a team on Moodle - see below)</li>
+<li>I understand the correlation between input and running time for different program structures</li>
+<li>I can use big-o-notation to describe the running time of algorithms</li>
+<li>I can calculate the running time of algorithms by adding up running times of different structures</li>
+<li>I can compare running times based on their running time in big-o-notation</li>
 </ul>
-<h2 id=during-the-lab>During the lab:</h2>
-<p>There are two lab groups. LSF tells you which group you are in, and when and in which room the lab takes place. The labs will usually take place at the HTW. The labs may occasionally happen online - in that case I will warn you in advance. During the lab you will be working on exercises in teams (see below).</p>
-<p>Please be there on time. Please note that food and open beverages are not allowed inside the lab.</p>
-<h3 id=communication>Communication</h3>
-<p>Ask questions that can&rsquo;t wait in the Moodle Forum. That&rsquo;s better than writing an email, because this way, all people can see the answer. Of course you can also ask during the lab.</p>
-<h3 id=lab-assignments>Lab Assignments</h3>
+<h2 id=pre-lab>Pre-Lab</h2>
+<p><em><strong>P1.</strong></em> Programs A and B are analyzed and are found to have worst-case running times no greater than 150 N log N and N2, respectively. Answer the following questions, if possible:</p>
+<p>a) Which program has the better guarantee on the running time for large values of N (N > 10 000)?</p>
+<p>b) Which program has the better guarantee on the running time for small values of N (N &lt; 100)?</p>
+<p>c) Which program will run faster on average for N = 1000?</p>
+<p>d) Is it possible that program B will run faster than program A on all possible inputs?</p>
+<p><em><strong>P2.</strong></em> An algorithm takes 0.5 ms for input size 100. How long will it take for input size 500 if the running time is the following:</p>
+<p>a) linear</p>
+<p>b) O (N log N)</p>
+<p>c) quadratic</p>
+<p>d) 4. cubic</p>
+<p><em><strong>P3.</strong></em> An algorithm takes 0.5 ms for input size 100. How large a problem can be solved in 1 min if the running time is the following:</p>
+<p>a) linear</p>
+<p>b) O (N log N)</p>
+<p>c) quadratic</p>
+<p>d) cubic</p>
+<p><em><strong>P4.</strong></em> Order the following functions by growth rate, and indicate which, if any, grow at the same rate.:</p>
 <ul>
-<li><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/lab-00/>Info2: Exercise 00: Programming & Tools</a></li>
-<li><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/lab-01/>Info2: Exercise 01: Application Design</a></li>
-<li><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/lab-02/>Info2: Exercise 02: Implementing CRC Cards</a></li>
-<li><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/lab-03/>Info2: Exercise 03: Histogram </a></li>
-<li><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/lab-04/>Info2: Exercise 04: Chatterbox</a></li>
-<li><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/lab-05/>Info2: Exercise 05: Execution times</a></li>
+<li>N</li>
+<li>square root of N</li>
+<li>N1.5</li>
+<li>N2</li>
+<li>N log N</li>
+<li>N log log N</li>
+<li>N log2 N</li>
+<li>N log (N2)</li>
+<li>2/N</li>
+<li>2N</li>
+<li>2N/2</li>
+<li>37</li>
+<li>N3</li>
+<li>N2 log N</li>
 </ul>
-<h2 id=teams>Teams</h2>
-<p>You will work in teams of two or three. You will switch teams after three or four labs.
-That means you should form new teams before the following labs:</p>
+<h2 id=assignment>Assignment</h2>
+<h3 id=part-1-analysis-of-algorithms>Part 1: Analysis of Algorithms</h3>
+<p>For each of the following seven program fragments, do the following:</p>
+<ol>
+<li>Do a Big-Oh analysis of the running time.</li>
+<li>Implement the code in a simple main class and run it for several interesting values of N.</li>
+</ol>
+<h4 id=code-fragments>Code Fragments</h4>
+<pre><code> // Fragment #1
+ for ( int i = 0; i &lt; n; i ++)
+     sum++;
+
+ // Fragment #2
+ for ( int i = 0; i &lt; n; i ++)
+     for ( int j = 0; j &lt; n; j ++)
+         sum++;
+
+ // Fragment #3
+ for ( int i = 0; i &lt; n; i ++)
+     for ( int j = i; j &lt; n; j ++)
+         sum++;
+
+ // Fragment #4
+ for ( int i = 0; i &lt; n; i ++)
+     sum ++;
+     for ( int j = 0; j &lt; n; j ++)
+         sum ++;
+
+ // Fragment #5
+ for ( int i = 0; i &lt; n; i ++)
+     for ( int j = 0; j &lt; n*n; j ++)
+     sum++;
+
+ // Fragment #6
+ for ( int i = 0; i &lt; n; i ++)
+     for ( int j = 0; j &lt; i; j ++)
+         sum++;
+
+ // Fragment #7
+ for ( int i = 1; i &lt; n; i ++)
+     for ( int j = 0; j &lt; n*n; j ++)
+         if (j % i == 0)
+            for (int k = 0; k &lt; j; k++)
+                sum++;
+</code></pre>
+<h3 id=part-2-prime-numbers>Part 2: Prime Numbers</h3>
+<p>A <em>prime number</em> has no factors besides 1 and itself. Do the following:</p>
+<ol start=3>
+<li>Write a simple method <code>public static bool isPrime (int n) {...}</code> to determine if a positive integer N is prime.</li>
+<li>Compare the running times needed to determine if a 20-bit number and a 40-bit number are prime by running 100 examples of each through your program.</li>
+</ol>
+<h3 id=for-the-bored>For the bored:</h3>
+<p>The Sieve of Eratosthenes is a method used to compute all primes less than N. Begin by making a table of integers 2 to N.
+Find the smallest integer i that is not crossed out - i is prime! (you might want to print it here to see the progress, but really you shouln&rsquo;t mix output within the algorithm) - and cross out all multiples of i (i , 2i , 3i , &mldr;.)
+Terminate when i is greater than the square root of N. The running time has been shown to be O (N log log N). Write a program to implement the Sieve and verify that the running time is as claimed. If you are <em>really</em> bored, animate this with a GUI like on the Wikipedia!</p>
+<h2 id=lab-report--what-to-turn-in>Lab Report / What to turn in</h2>
+<p>All info on the lab reports can be found on the <a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/>Labs</a> page.</p>
+<p>Also answer the following questions in your report.</p>
+<p>Additional questions for part 1:</p>
 <ul>
-<li><a href=lab-01>Exercise 01 - Application Design</a></li>
-<li><a href=lab-05>Exercise 05 - Execution Times</a></li>
-<li>Exercise 08 - Eight Queens</li>
-<li>Exercise 11 - Finite State Automata and Sorting Algorithms</li>
+<li>Which are interesting values for N?</li>
+<li>Compare your analysis with the actual number of steps (i.e. the value of sum after the loop).</li>
 </ul>
-<p>You can chose your team mates but they should be in the same LSF group (1 or 2, aka Tuesday or Thursday group). Each team mate needs to register for the team on Moodle. I will not form teams for you, this is your own responsability. If you have not signed up for a team, you won&rsquo;t be able to hand anything in.</p>
-<h2 id=reports>Reports</h2>
-<h3 id=deadline>Deadline</h3>
-<p>Lab Reports are due at 10pm the night before your next lab.</p>
-<h3 id=grading>Grading</h3>
-<p>Lab reports won&rsquo;t be graded - they just get marked with &ldquo;ok&rdquo; or &ldquo;not ok&rdquo;.<br>
-A report is &ldquo;not ok&rdquo; if any of the following is True:</p>
+<p>Additional questions for part 2:</p>
 <ul>
-<li>the report is missing</li>
-<li>you are not transparent on who did what (You need to be transparent on who did what. Collaborating with people outside your team is ok,
-but be transparent about it! Using sources from the Internet/books is ok, but cite them appropriately!)</li>
-<li>the report has too little significant content on the lab (see below)</li>
-<li>the report is not submitted correctly (see below)</li>
-<li>the code is not submitted correctly (see below)</li>
+<li>In terms of N, what is the worst-case running time of your program?</li>
+<li>Let B equal the number of bits in the binary representation of N. What is relationship between B and N?</li>
+<li>In terms of B, what is the worst-case running time of your program?</li>
+<li>Present the results of your experiment</li>
 </ul>
-<p>You can use the late slot (see below) to hand in rejected Lab Reports again.</p>
-<p>You will not be allowed to take the exam if you plagiarized.</p>
-<h3 id=content-of-the-report>Content of the report</h3>
-<p>Content that should go in the report:</p>
-<ul>
-<li>a summary of what the lab was about</li>
-<li>details on what you learned in this lab OR details on what the lab was about</li>
-<li>if you were asked to write code: an explanation of how you tested your code</li>
-<li>if questions were asked: the answers to the questions</li>
-</ul>
-<p><em>What if I our team didn&rsquo;t get the code to work?</em>
-It&rsquo;s ok not to have completely succeeded on the assignment, as long as you have tried sufficiently.</p>
-<p><em>How long should the report be?</em>
-Elegance lays in the ability to get to the point in as few sentences as necessary.</p>
-<p><em>Which language should the report be in?</em>
-You can write in English or German. But decide for one language.</p>
-<h3 id=how-to-submit-correctly>How to submit correctly</h3>
-<p>Please submit to Moodle <em>only</em>:</p>
-<ul>
-<li>A pdf with your report</li>
-<li>As a text answer: a link to your team&rsquo;s git repository (see below)</li>
-</ul>
-<p>Only one team member should upload the report. If team members upload different reports (or different repos), I&rsquo;ll chose one at random to review.</p>
-<h3 id=git>Git</h3>
-<p>You will use Git to manage your team&rsquo;s code. Code can only be handed in for grading via a link to the repository in the correct folder in this class' group on the IMI GitLab Server.</p>
-<p>The IMI GitLab Server can be found at: <a href=https://gl-imi.f4.htw-berlin.de>https://gl-imi.f4.htw-berlin.de</a>. It can only be reached via the HTW network. So if you are at home, use VPN (see <a href=https://rz.htw-berlin.de/anleitungen/vpn/)>https://rz.htw-berlin.de/anleitungen/vpn/)</a>.</p>
-<p>The class group can be found at: <a href=https://gl-imi.f4.htw-berlin.de/groups/info2-wise2021>https://gl-imi.f4.htw-berlin.de/groups/info2-wise2021</a>. If you registered for the course I will have added your email address. Tell me if have not been added.</p>
-<p>There will be folders for each lab. Create the repository for a lab inside that folder (Click on &ldquo;new project&rdquo;). Name it something like: &ldquo;group01-team03-lab00&rdquo; (so that it includes your group number from LSF, your team number and the lab number).</p>
-<h3 id=late-reports>Late reports</h3>
-<p>You can hand in 4 reports after their deadline, until Febuary 10th, 10pm.</p>
-<p><em>How to hand in late reports</em>
-There are 4 &ldquo;late slots&rdquo; for handing in reports after the deadline, but they have to be handed in before Febuary 10. Each person has to upload the late report by themselves, even if you worked in a team.</p>
-<p><em>But &mldr;!</em>
-If you fall ill for more than a week or are unable to continuously work on
-the lab reports for some other reason, come talk to me or at least email me as
-early as possible and we will find an individual solution.</p>
 </div>
 </div>
 </div>
@@ -281,60 +305,26 @@ This page was authored by: kleinen
 </div>
 </small>
 <div><hr><small> <h7>Debug Info</h7><ul>
-<li>Template: theme: layouts/classes/list.html </li>
+<li>Template: theme: layouts/classes/single.html </li>
 <li>
 hugo.Environment: staging
 </li><li>
-Path: classes/ws2021/info2/labs/_index.md
+Path: classes/ws2021/info2/labs/lab-05.md
 </li><li>
 Section: classes
 </li><li>
-Kind: section
+Kind: page
 </li><li>
 Type: classes
 </li><li>
 Scratch type: class_subpage
 </li><li>
-Layout: page
+Layout: lab
 </li><li>
-LinkOrNot: [/classes/ws2021/info2/labs/lab-01 /classes/ws2021/info2/labs/lab-05 /classes/ws2021/info2/labs/lab-08 /classes/ws2021/info2/labs/lab-11 /classes/ws2021/info2/labs/{{ site.BaseURL }}/studies/grading/guideline]</li><li>
+LinkOrNot: </li><li>
 class_page_path: /classes/ws2021/info2
 </li><li>
-.Scratch: {map[class_page_path:/classes/ws2021/info2 linkornot:[/classes/ws2021/info2/labs/lab-01 /classes/ws2021/info2/labs/lab-05 /classes/ws2021/info2/labs/lab-08 /classes/ws2021/info2/labs/lab-11 /classes/ws2021/info2/labs/{{ site.BaseURL }}/studies/grading/guideline] trace:layouts/classes/list.html type:class_subpage] {{0 0} 0 0 0 0}}
-</li>
-<li>Subpages in order:
-<ul>
-<li>
-<a href=/classes/ws2021/info2/labs/lab-00/>
-Info2: Exercise 00: Programming & Tools
-</a>
-</li>
-<li>
-<a href=/classes/ws2021/info2/labs/lab-01/>
-Info2: Exercise 01: Application Design
-</a>
-</li>
-<li>
-<a href=/classes/ws2021/info2/labs/lab-02/>
-Info2: Exercise 02: Implementing CRC Cards
-</a>
-</li>
-<li>
-<a href=/classes/ws2021/info2/labs/lab-03/>
-Info2: Exercise 03: Histogram
-</a>
-</li>
-<li>
-<a href=/classes/ws2021/info2/labs/lab-04/>
-Info2: Exercise 04: Chatterbox
-</a>
-</li>
-<li>
-<a href=/classes/ws2021/info2/labs/lab-05/>
-Info2: Exercise 05: Execution times
-</a>
-</li>
-</ul>
+.Scratch: {map[class_page_path:/classes/ws2021/info2 pageTitle:Info 2 WS 2021/22 - Labs and Exercises trace:layouts/classes/single.html type:class_subpage] {{0 0} 0 0 0 0}}
 </li>
 </ul></small><hr></div>
 </div>
