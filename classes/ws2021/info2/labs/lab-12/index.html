@@ -1,6 +1,6 @@
 <!doctype html><html>
 <head>
-<title>Info2: Handout for Exercise 6: Infix/Prefix/Postfix - STAGING --- Prof. Dr. Barne Kleinen</title>
+<title>Info2: Exercise 12: Scrabble Cheater - Basic Edition - STAGING --- Prof. Dr. Barne Kleinen</title>
 <link rel=icon href=https://bkleinen.github.io/staging//favicon.ico>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -96,7 +96,7 @@ at <a href=https://www.htw-berlin.de>HTW Berlin</a>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/>ws2021</a></li>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/>info2</a></li>
 <li class=breadcrumb-item><a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/>labs</a></li>
-<li class="breadcrumb-item active" aria-current=page>lab-06-handout</li>
+<li class="breadcrumb-item active" aria-current=page>lab-12</li>
 </ol>
 </nav>
 </div>
@@ -127,95 +127,65 @@ at <a href=https://www.htw-berlin.de>HTW Berlin</a>
 </ul>
 </div>
 <div class=container-fluid>
-<h2 class=followed> Info2: Handout for Exercise 6: Infix/Prefix/Postfix</h2>
+<h2 class=followed> Info2: Exercise 12: Scrabble Cheater - Basic Edition </h2>
 <header class=following>
 <a data-bs-toggle=collapse href=#tocContent role=button aria-expanded=false aria-controls=tocContent>
 Table of Contents
 </a>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/lab-12/>&lt;prev</a>
+<a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/lab-11/>&lt;prev</a>
+<a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/lab-06-handout/>next></a>
 </header>
 <div class=collapse id=tocContent>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#definitions>Definitions</a></li>
-<li><a href=#calculator-algorithm>Calculator algorithm</a>
-<ul>
-<li><a href=#convert-infix-to-postfix-algorithm>Convert infix to postfix algorithm</a></li>
-<li><a href=#evaluate-postfix-algorithm>Evaluate postfix algorithm</a></li>
-</ul>
-</li>
+<li><a href=#pre-lab>Pre-Lab</a></li>
+<li><a href=#assignment>Assignment</a></li>
+<li><a href=#lab-report>Lab Report</a></li>
 </ul>
 </nav>
 </div>
-<h2 id=definitions>Definitions</h2>
-<p><strong>Infix:</strong> The operator is placed between the two operands: 3 + 5</p>
-<p><strong>Prefix:</strong> The operator is placed before the two operands: + 3 5</p>
-<p><strong>Postfix:</strong> The operator is placed after the two operands: 3 5 +</p>
-<h2 id=calculator-algorithm>Calculator algorithm</h2>
-<ol>
-<li>Convert infix to postfix</li>
-<li>Use stack to evaluate postfix</li>
-<li>Output top of stack (should be the only element)</li>
-</ol>
-<h3 id=convert-infix-to-postfix-algorithm>Convert infix to postfix algorithm</h3>
-<ol>
-<li>Given a sequence of tokens s and a result r</li>
-<li>While s is not empty:
-<ol>
-<li>Let t = next token.</li>
-<li>If t is an operand, r = r + t;</li>
-<li>If t is an open parenthesis, push it.</li>
-<li>If t is a close parenthesis:
-<ol>
-<li>while top &lt;> open parenthesis
-<ol>
-<li>r = r + top</li>
-<li>pop</li>
-</ol>
+<p><img src=./../images/scrabble_4468636695_2434bc60ff_b.jpg alt=Scrabble title="scrabble tile rack">
+Foto by <a href=https://www.flickr.com/photos/mk1971/4468636695>Mags_cat</a></p>
+<h2 id=pre-lab>Pre-Lab</h2>
+<p><em><strong>P1.</strong></em> Review the rules of <a href=https://en.wikipedia.org/wiki/Scrabble>Scrabble</a>, if you have never played it before.</p>
+<p><em><strong>P2.</strong></em> What is a permutation?</p>
+<p><em><strong>P3.</strong></em> What would a normalization function for different permutations of words look like? That is, &ldquo;JAVA&rdquo; and &ldquo;VAJA&rdquo; are permutations, what would a normalized permutation look like?</p>
+<p><em><strong>P4.</strong></em> How do you determine if two Strings are permutations of each other?</p>
+<p><em><strong>P5.</strong></em> For the bored: How can you generate all permutations of the characters in a String? See <a href="https://www.youtube.com/watch?v=GCm7m5671Ps">Back to Back SWE &ldquo;How To Permute A String - Generate All Permutations Of A String&rdquo;</a> for a clear explanation of a backtracking solution. See <a href=https://dl.acm.org/doi/10.1145/356689.356692>Sedgewick 1977</a> (available with VPN) for theoretical details on several different solutions. What if some of the letters are the same? Hint: Look at the <a href=https://de.wikipedia.org/wiki/Multinomialkoeffizient>multinomial coefficient</a>.</p>
+<h2 id=assignment>Assignment</h2>
+<p>You will implement a simple scrabble cheater that will read in words from a scrabble word list, and find all permutations for a 7-letter tile rack.</p>
+<p>There is a lot to do, so you might want to split up the work in your group.</p>
+<ol start=0>
+<li>
+<p>Use the prepared scaffold for the interfaces. It also contains some testcases. You can find it on GitHub <a href=https://github.com/htw-imi-info2/ScrabbleCheater>https://github.com/htw-imi-info2/ScrabbleCheater</a>.</p>
 </li>
-<li>pop // removes the open parenthesis</li>
-</ol>
+<li>
+<p>Implement <em>initFromFile</em> in <em><a href=https://github.com/htw-imi-info2/ScrabbleCheater/blob/master/src/scrabble/data/SimpleWordList.java>SimpleWordList</a></em> that
+initializes the ScrabbleCheater from a given file. For now, simply store the words in a suitable Collection of the Java Collections Framework.</p>
 </li>
-<li>If t is an operator
-<ol>
-<li>while not (top is of lower precedence than t OR t is right associative and top is of equal precedence)
-<ol>
-<li>r = r + top</li>
-<li>pop</li>
-</ol>
+<li>
+<p>Implement the <em>getNormalized</em> and <em>equals</em> methods in <em><a href=https://github.com/htw-imi-info2/ScrabbleCheater/blob/master/src/scrabble/util/Permutation.java>Permutation</a></em>. Two Permutation instances should be equal if one is a permutation of the other - regardless of the actual words they represent. Having a look at the provided test cases and making them run might help with the implementation.</p>
 </li>
-<li>push t</li>
-</ol>
+<li>
+<p>Implement the <em>validWordsUsingAllTiles</em> method in <em>SimpleWordList</em> that returns a Set of all the Words that are permutations of a given tile rack. That is, all words of the same length of the tile rack that can be build with it and that are in the word list, thus valid scrabble words.</p>
+</li>
+<li>
+<p>Use the Permutation class to make looking up the <em>validWordsUsingAllTiles()</em> more efficient.
+Hint: how often will <em>normalize()</em> be called a) for initialisation and b) for a lookup in your WordList?</p>
+</li>
+<li>
+<p>Provide a second implementation of <em>WordList</em> using a HashMap as the underlying collection for storing the words. Note that you need to make sure that <em>equals()</em> and <em>hashCode()</em> work correctly on permutations in order to store Permutations at the same place in the HashMap.</p>
+</li>
+<li>
+<p>Add a main method or some sort of interface to input words that should be looked up by your scrabble cheater (e.g. taking a parameter or reading in tile racks from standard in).</p>
+</li>
+<li>
+<p><em>For the bored</em>: Measure the time improvement introduced by the HashMap implementation. The measured time might be small, so chose an adequate unit or use a loop to execute the code often.</p>
 </li>
 </ol>
-</li>
-<li>while stack not empty
-<ol>
-<li>r = r + top</li>
-<li>pop</li>
-</ol>
-</li>
-</ol>
-<h3 id=evaluate-postfix-algorithm>Evaluate postfix algorithm</h3>
-<ol>
-<li>Given a sequence of tokens s</li>
-<li>While s is not empty:
-<ol>
-<li>Let t = next token.</li>
-<li>If t is an operand, push it;</li>
-<li>If t is an operator:
-<ol>
-<li>put the top into rhs, pop it;</li>
-<li>put the top into lhs, pop it;</li>
-<li>calculate lhs t rhs;</li>
-<li>push the result</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>The top of the stack is the result.</li>
-</ol>
+<h2 id=lab-report>Lab Report</h2>
+<p>All info on the lab reports can be found on the <a href=https://bkleinen.github.io/staging/classes/ws2021/info2/labs/>Labs</a> page.</p>
 </div>
 </div>
 </div>
@@ -262,7 +232,7 @@ This page was authored by: kleinen
 <li>
 hugo.Environment: staging
 </li><li>
-Path: classes/ws2021/info2/labs/lab-06-handout.md
+Path: classes/ws2021/info2/labs/lab-12.md
 </li><li>
 Section: classes
 </li><li>
