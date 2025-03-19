@@ -10000,6 +10000,18 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html
 
  
  
+
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+
+ 
+ 
  
  
 
@@ -11398,7 +11410,13 @@ Aktuelle Infos zu den Prüfungsterminen im LSF.&lt;/p></description></item><item
  &lt;td style="text-align: left">&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>Videos Software Engineering</title><link>https://bkleinen.github.io/staging/bibliographies/se_videos/</link><pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate><guid>https://bkleinen.github.io/staging/bibliographies/se_videos/</guid><description/></item><item><title>Working with HTW Machines</title><link>https://bkleinen.github.io/staging/material/ops/hrz/</link><pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate><guid>https://bkleinen.github.io/staging/material/ops/hrz/</guid><description>&lt;h2 id="copy-files-from-your-hrz-home-directory-aka-htw-space">Copy files from your HRZ Home Directory (aka HTW-Space)&lt;/h2>
+&lt;/table></description></item><item><title>Losing Lena - "Techs Original Sin"</title><link>https://bkleinen.github.io/staging/material/diversity/lena/</link><pubDate>Tue, 18 Mar 2025 00:00:00 +0000</pubDate><guid>https://bkleinen.github.io/staging/material/diversity/lena/</guid><description>&lt;p>Ein Ausschnitt eines Playboy-Centerfolds war(ist?) das meist verwendete Testbild in der Bildverarbeitung.&lt;/p>
+&lt;p>Im Dokumentarfilm von Kyra Bartley: &amp;ldquo;Losing Lena&amp;rdquo; 2019, 26 Min.
+&lt;a href="https://www.imdb.com/de/title/tt11337268/">auf imdb&lt;/a> veröffentlicht auf
+&lt;a href="https://www.facebook.com/codelikeagirlau/videos/985614161797010/">Facebook Watch&lt;/a>
+wird gut deutlich, warum dies problematisch und diskriminierend ist.&lt;/p>
+&lt;p>In den letzten 10 Jahren sind einige Artikel veröffentlicht worden und wieder verschwunden, insbesondere kann ich die Seite, auf der sich &lt;a href="https://en.wikipedia.org/wiki/Lena_Fors%C3%A9n">Lena Forsén (Soderberg)&lt;/a> selbst
+gegen die Verwendung ihres Bildes ausspricht, nicht mehr finden. Daher nur diese wenigen Links zum Weiterlesen:&lt;/p></description></item><item><title>Videos Software Engineering</title><link>https://bkleinen.github.io/staging/bibliographies/se_videos/</link><pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate><guid>https://bkleinen.github.io/staging/bibliographies/se_videos/</guid><description/></item><item><title>Working with HTW Machines</title><link>https://bkleinen.github.io/staging/material/ops/hrz/</link><pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate><guid>https://bkleinen.github.io/staging/material/ops/hrz/</guid><description>&lt;h2 id="copy-files-from-your-hrz-home-directory-aka-htw-space">Copy files from your HRZ Home Directory (aka HTW-Space)&lt;/h2>
 &lt;p>There are rather verbose manuals about various ways to
 copy files from your HTW-RZ home directory to somewhere else.
 (see
